@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hangman</title>
+    <link rel="icon" type="image/x-icon" href="Hangman.ico">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Blinker:wght@600&family=Caveat:wght@700&family=Tektur:wght@600&family=Montserrat:wght@100;300;400;900&family=Poppins:wght@100;300;400;700;900&family=Ubuntu&display=swap"
+        rel="stylesheet">
+
+    <!-- StyleSheets -->
+
+    <!-- BootStrap 5.3 cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+    <!-- FontAwesome script -->
+    <script src="https://kit.fontawesome.com/056a4e962f.js" crossorigin="anonymous"></script>
+
+    <!-- My Styles -->
+    <link rel="stylesheet" href="styles.css">
+
+
+
+</head>
+<body class="bg-dark ">
+    <div id="modes" class="switch-mode grey" onclick="switchMode()">Switch Mode</div>
+    <div id="background" class="game-container ">
+        <h1 class="text-center text-white fw-bold">Hangman Game</h1>
+    <p class="text-center m-4 text-white fw-lighter">Find the hidden word - Enter a letter</p>
+        <div class="hanging-man text-center">
+            <img id="hangman-image"  src="1.png" alt="hangman ">
+
+        </div>
+    
+        <div class="word  text-center" id="word" style="position: relative; bottom:35px;">
+            <input type="text" id="hidden-input" style="opacity: 0; position: relative; top: 40px; left: 0; width:350px; height: 50px;">
+            <div id="correct-letters"  class="text-center text-white fw-lighter" ></div>
+        </div>
+
+        <div class="wrong-letters-container text-center">
+            
+            <span class="text-center h3  text-white fw-bold">Wrong Words:   </span>    
+            <span id="wrong-letters"  class="text-center  text-white fw-lighter"></span>
+        </div>
+
+    </div>
+
+    <div id="popup" class="popup">
+        <i id="font-awesome" ></i>
+        <p id="popup-text" class="text-center"></p>
+        <p id="popup-text-details" class="text-center"></p>
+        <button id="play-again-btn">Play Again</button>
+      </div>
+  
+  
+
+
+    <div id="notification-bar" >
+        <div id="notify-1" class="text-center " role="alert" style="display: none;">
+            Key Already Pressed
+          </div>
+        <div id="notify-2" class="text-center " role="alert" style="display: none;">
+            Please Enter an Alphabet
+          </div>
+    </div>
+    
+
+
+
+
+
+
+
+
+     <!-- Scripts -->
+
+   <!-- Bootstrap Script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+
+    <!-- My Script-->
+    <script src="script.js"></script>
+</body>
+</html>

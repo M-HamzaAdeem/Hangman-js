@@ -1,0 +1,199 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body {
+    overflow:hidden; /* Hide scrollbars */
+    /* height: 100vh; */
+  }
+
+#correct-letters{
+  letter-spacing: 20px;
+  font-family: Poppins;
+}
+  /* CSS to style the popup */
+.popup {
+    padding: 100px;
+    display: none;
+    position: fixed;
+    width: 350px;
+    height: 250px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: #30302b;
+    border: 2px solid #757070;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgb(255, 255, 255);
+    z-index: 9999;
+    color: azure;
+  }
+  .popup #popup-text{
+
+    font-weight: 900;
+  }
+
+  .popup .fa-check{
+    margin: 50px 100px 0px 140px;
+    color: green;
+  }
+
+  .popup .fa-xmark{
+    margin: 50px 100px 0px 140px;
+    color: red;
+  }
+
+
+  .popup #popup-text{
+    margin: 20px 90px 10px 90px;
+    font-weight: 900;
+  }
+  #popup:hover {
+
+    box-shadow: 0 0 20px rgb(255, 255, 255);
+  }
+  
+
+/* Style the "Play Again" button */
+#play-again-btn {
+    position:absolute;
+    bottom: 20px;
+    left: 120px;
+    border-radius: 10px;
+    padding: 10px 20px;
+    background-color: yellowgreen;
+    color: black;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+  }
+  #play-again-btn:hover {
+    background-color: yellow;
+    box-shadow: 0 0 10px rgb(70, 62, 62);
+  }
+  
+
+ /* CSS to style the notification */
+#notification-bar{
+    visibility: hidden;
+    width: max-content;
+    height: 50px;
+    position:absolute;
+    bottom: 20px;
+    left: 80%;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 10px 10px  rgba(0, 0, 0, 0.938);
+    font-weight: 600;
+}
+.slide-up{
+	animation-name: slide-up;
+	animation-duration: 1s;	
+	animation-timing-function: ease;	
+    visibility: visible !important;	
+}
+
+@keyframes slide-up {
+	0% {
+		transform: translateX(200%);
+	}
+	50%{
+		transform: translateX(8%);
+	}
+	65%{
+		transform: translateX(-8%);
+	}
+	80%{
+		transform: translateX(8%);
+	}
+	95%{
+		transform: translateX(-4%);
+	}			
+	100% {
+		transform: translateX(2%);
+	}		
+}
+
+.blur-bg{
+  filter: blur(4px);
+}
+
+.black{
+  color: black;
+}
+.grey{
+  color: grey;
+}
+.switch-mode{
+  /* color: gray; */
+  width: max-content;
+  font-size: 20px;
+  position: absolute;
+  right: 10px;
+  top: 15px;
+  cursor: pointer;
+
+}
+.switch-mode::after{
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0px;
+  height: 4px;
+  width: 100%;
+  background-color: gray;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: 0.3s ease;
+
+}
+.black::after{
+  background-color: black;
+}
+.grey::after{
+  background-color: gray;
+}
+.switch-mode:hover::after{
+  transform: scaleX(1);
+}
+body div h1{
+  margin-top: 20px;
+}
+
+@media only screen and (max-width: 600px) {
+
+  #notification-bar{
+    bottom: 120px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+  }
+
+  body div h1{
+    margin-top: 60px;
+  }
+
+  @keyframes slide-up {
+    0% {
+      transform: translateY(300%);
+    }
+    50%{
+      transform: translateY(8%);
+    }
+    65%{
+      transform: translateY(-8%);
+    }
+    80%{
+      transform: translateY(8%);
+    }
+    95%{
+      transform: translateY(-4%);
+    }			
+    100% {
+      transform: translateY(0%);
+    }		
+  }
+}
