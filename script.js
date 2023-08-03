@@ -99,14 +99,15 @@ function mobileKeyboard(event) {
 
 
 function 
-updateLetters(keyPressed) {
+updateLetters(keyPress) {
  
 
     // Make sure keyPressed is not null and is a lowercase letter
-    if (keyPressed !== null && keyPressed.toLowerCase() >= 'a' && keyPressed.toLowerCase() <= 'z') {
-        keyPressed = keyPressed.toLowerCase();
+    if (keyPress !== null && keyPress.toLowerCase() >= 'a' && keyPress.toLowerCase() <= 'z') {
+        keyPressed = keyPress.toLowerCase();
 
         if(wrongWords.innerHTML.includes(keyPressed) || correctWords.innerHTML.includes(keyPressed)) {
+           
             notification("notify-1");
         } else if (guessWord.includes(keyPressed)) {
             correctLetter(keyPressed);
@@ -116,6 +117,7 @@ updateLetters(keyPressed) {
     } else {
         notification("notify-2");
     }
+
     
 }
 
